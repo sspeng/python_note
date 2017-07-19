@@ -1,4 +1,5 @@
 #! /usr/bin/python3
+# coding=utf8
 import os
 
 file_names = [ name for name in os.listdir() if name.endswith(('.h', '.cpp'))]
