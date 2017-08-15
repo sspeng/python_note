@@ -5,3 +5,4 @@ ascii_dora.png
 output.txt
 test.png
 !.gitignore
+*~
