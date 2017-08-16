@@ -1,8 +1,9 @@
 question_list.md
+/MNIST_data
+/__pycache__
 .*
-.[oa]
-ascii_dora.png
-output.txt
-test.png
-!.gitignore
 *~
+.[oa]
+*.png
+*.txt
+!.gitignore
