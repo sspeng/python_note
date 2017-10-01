@@ -1,6 +1,7 @@
 question_list.md
 /MNIST_data
 /__pycache__
+/baidu_img
 .*
 *~
 .[oa]
