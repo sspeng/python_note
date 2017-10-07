@@ -12,3 +12,6 @@ question_list.md
 *.png
 *.txt
 !.gitignore
+*jpg
+*svg
+*png
