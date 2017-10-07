@@ -11,7 +11,6 @@ is_continue = True
 MAXSIZE = 100
 
 
-
 class Producer(threading.Thread):
     def __init__(self, thread_name: str, prod_buffer: queue.Queue):
         threading.Thread.__init__(self, name=thread_name)
