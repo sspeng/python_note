@@ -78,6 +78,7 @@ class Consumer(threading.Thread):
             item = self.con_buffer.get()
             print('%s : %s is consuming, %d in the queue is consumed!' % (time.ctime(), self.getName(), item))
             self.sum += item
+            self.con_buffer.task_done()
             self.count = self.count + 1
             move_lock.acquire()
             if not is_moving and self.con_buffer.empty():
