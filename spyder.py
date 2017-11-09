@@ -17,7 +17,7 @@ headers = {
                   'Chrome/61.0.3163.100 Safari/537.36'
 }
 
-home_url = 'https://qingbuyaohaixiu.com'
+home_url = ''
 
 current_url = home_url
 session = requests.session()
