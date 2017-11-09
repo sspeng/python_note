@@ -12,7 +12,7 @@ prod_lock = threading.Lock()
 is_moving = True
 move_lock = threading.Lock()
 
-MAXSIZE = 1000
+MAXSIZE = 100
 
 
 class Producer(threading.Thread):
@@ -24,8 +24,9 @@ class Producer(threading.Thread):
         global is_producing
         global prod_lock
         for i in range(MAXSIZE):
-            print('%s : %s is producing %d to the producer buffer' % (time.ctime(), self.getName(), i))
-            self.prod_buffer.put(random.randint(1, 1000))
+            item = random.randint(0, 1000)
+            print('%s : %s is producing %d to the producer buffer' % (time.ctime(), self.getName(), item))
+            self.prod_buffer.put(item)
             time.sleep(random.random())
         print('%s : %s finished!' % (time.ctime(), self.getName()))
         prod_lock.acquire()
