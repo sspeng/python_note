@@ -4,16 +4,13 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-x = np.linspace(0, 10, 1000)
-y = np.sin(x) + 1
-z = np.cos(x ** 2) + 1
+R = 3
+W = 10
 
-plt.figure(figsize=(8, 4))
-plt.plot(x, y, label='$\sin x+1$', color='red', linewidth=2)
-plt.plot(x, z, 'b--', label='$\cos x^2+1$')
-plt.xlabel('Time(s) ')
-plt.ylabel('Volt')
-plt.title('A Simple Example')
-plt.ylim(0, 2.2)
-plt.legend()
+X = np.linspace(0, 10,1000, endpoint=True)
+
+C, S = np.sin(W * X) + R, np.cos(W * X) + R
+
+ax1 = plt.subplot(111, projection='polar')
+ax1.plot(X, C)
 plt.show()
