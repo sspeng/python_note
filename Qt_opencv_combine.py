@@ -36,9 +36,10 @@ class myLabel(QLabel):
         pixmap2.save('demo.png')
 
 
-class Example(QWidget)
+class Example(QWidget):
     def __init__(self):
         super().__init__()
         self.initUi()
 
     def initUi(self):
+        pass
